@@ -1,0 +1,96 @@
+# depslib dependency file v1.0
+1652481249 source:d:\utn\1er cuatri 2022\lab1\parcial_labo\pardo.roberto.p1.labi.1g\color.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"color.h"
+
+1652481268 d:\utn\1er cuatri 2022\lab1\parcial_labo\pardo.roberto.p1.labi.1g\color.h
+
+1652479262 source:d:\utn\1er cuatri 2022\lab1\parcial_labo\pardo.roberto.p1.labi.1g\fecha.c
+
+1652488376 source:d:\utn\1er cuatri 2022\lab1\parcial_labo\pardo.roberto.p1.labi.1g\main.c
+	<stdio.h>
+	<stdlib.h>
+	"trabajo.h"
+	"auto.h"
+	"marca.h"
+	"color.h"
+	"servicio.h"
+	"fecha.h"
+	"utn.h"
+	"pardo.h"
+
+1652480908 source:d:\utn\1er cuatri 2022\lab1\parcial_labo\pardo.roberto.p1.labi.1g\marca.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"marca.h"
+	"utn.h"
+	"pardo.h"
+
+1652480881 d:\utn\1er cuatri 2022\lab1\parcial_labo\pardo.roberto.p1.labi.1g\marca.h
+
+1652413817 d:\utn\1er cuatri 2022\lab1\parcial_labo\pardo.roberto.p1.labi.1g\utn.h
+
+1652414003 d:\utn\1er cuatri 2022\lab1\parcial_labo\pardo.roberto.p1.labi.1g\pardo.h
+
+1652415155 source:d:\utn\1er cuatri 2022\lab1\parcial_labo\pardo.roberto.p1.labi.1g\pardo.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"pardo.h"
+	"utn.h"
+
+1652489049 source:d:\utn\1er cuatri 2022\lab1\parcial_labo\pardo.roberto.p1.labi.1g\auto.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"auto.h"
+	"marca.h"
+	"color.h"
+	"utn.h"
+	"pardo.h"
+
+1652488422 d:\utn\1er cuatri 2022\lab1\parcial_labo\pardo.roberto.p1.labi.1g\auto.h
+	"marca.h"
+	"color.h"
+
+1652413749 source:d:\utn\1er cuatri 2022\lab1\parcial_labo\pardo.roberto.p1.labi.1g\utn.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"utn.h"
+
+1652485589 source:d:\utn\1er cuatri 2022\lab1\parcial_labo\pardo.roberto.p1.labi.1g\servicio.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"servicio.h"
+
+1652481789 d:\utn\1er cuatri 2022\lab1\parcial_labo\pardo.roberto.p1.labi.1g\servicio.h
+
+1652489371 source:d:\utn\1er cuatri 2022\lab1\parcial_labo\pardo.roberto.p1.labi.1g\trabajo.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"trabajo.h"
+	"auto.h"
+	"marca.h"
+	"color.h"
+	"servicio.h"
+	"fecha.h"
+	"utn.h"
+	"pardo.h"
+
+1652488474 d:\utn\1er cuatri 2022\lab1\parcial_labo\pardo.roberto.p1.labi.1g\trabajo.h
+	"fecha.h"
+	"auto.h"
+	"marca.h"
+	"color.h"
+	"servicio.h"
+
+1652479854 d:\utn\1er cuatri 2022\lab1\parcial_labo\pardo.roberto.p1.labi.1g\fecha.h
+
