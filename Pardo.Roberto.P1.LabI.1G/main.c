@@ -74,6 +74,8 @@ int main()
 
     harcodearAutos(autos, TAM_AUTO, 10, &nextIdAuto);
 
+    harcodearTrabajos(trabajos, TAM_TRAB, 20, &nextIdTrabajo);
+
     do{
         system("cls");
 

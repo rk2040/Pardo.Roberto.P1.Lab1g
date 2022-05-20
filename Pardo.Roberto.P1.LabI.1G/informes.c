@@ -25,15 +25,15 @@ int menuInformes()
     printf("  *** Informes Complementarios ***   \n");
     printf("-------------------------------------\n");
     printf(" 1- Mostrar Autos por Color seleccionado.\n");
-    printf(" 2- Mostrar Autos por Marca seleccionado.\n");
+    printf(" 2- Mostrar Autos por Marca seleccionada.\n");
     printf(" 3- Informar Promedio de Autos con Caja Manual y promedio de Autos con Caja Automatica.\n");
     printf(" 4- Mostrar un listado de Autos separados por Tipo de Caja \n");
-    printf(" 5- Informar la o las Marcas con mas autos con caja Manual \n");
-    printf(" 6- Mostrar la Marca con menos Autos \n");
+    printf(" 5- Elegir un Color y una Marca y contar cuantos Autos hay de ese Color y esa Marca \n");
+    printf(" 6- Mostrar la o las Marcas mas elegida por los clientes \n");
 // Bonus Track  -   Harcodear algunos Trabajos
-    printf(" 7- Pedir un Auto y mostrar todos los Trabajos que se le realizaron \n");
-    printf(" 8- Pedir un Auto e informar la suma de los precios (costo) de todos los Trabajos que se le realizaron \n");
-    printf(" 9- Pedir un Servicio y mostrar los autos que recibieron ese servicio y en que fecha \n");
+    printf(" 7- Pedir un Auto y mostrar todos los Trabajos que se le hicieron \n");
+    printf(" 8- Pedir un Auto e informar la suma de los importes de todos los Trabajos que se le hicieron \n");
+    printf(" 9- Pedir un Servicio y mostrar los autos a los que se le realizaron ese servicio y la fecha \n");
     printf("10- Pedir una fecha y mostrar todos los servicios realizados en la misma \n");
     printf(" 0- Volver al menu anterior. \n");
     printf("Ingrese una opcion: \n");
@@ -73,10 +73,10 @@ int informes(eAuto autos[], int tamAuto, eMarca marcas[], int tamMarca, eColor c
                 break;
 // Bonus Track  -   Harcodear algunos Trabajos
             case 7:
-//                trabajosPorAuto(trabajos, tamTrabajo, servicios, tamServicio, autos, tamAuto, marcas, tamMarca, colores, tamColor);
+                trabajosPorAuto(trabajos, tamTrabajo, servicios, tamServicio, autos, tamAuto, marcas, tamMarca, colores, tamColor);
                 break;
             case 8:
- //               precioPorTrabajosPorAuto(trabajos, tamTrabajo, servicios, tamServicio, autos, tamAuto, marcas, tamMarca, colores, tamColor);
+                precioPorTrabajosPorAuto(trabajos, tamTrabajo, servicios, tamServicio, autos, tamAuto, marcas, tamMarca, colores, tamColor);
                 break;
             case 9:
  //               autosPorServicios(trabajos, tamTrabajo, servicios, tamServicio, autos, tamAuto, marcas, tamMarca, colores, tamColor);

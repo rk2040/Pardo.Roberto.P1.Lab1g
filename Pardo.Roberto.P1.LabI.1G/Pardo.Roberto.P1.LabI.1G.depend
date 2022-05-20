@@ -9,7 +9,7 @@
 
 1652479262 source:d:\utn\1er cuatri 2022\lab1\parcial_labo\pardo.roberto.p1.labi.1g\fecha.c
 
-1653085454 source:d:\utn\1er cuatri 2022\lab1\parcial_labo\pardo.roberto.p1.labi.1g\main.c
+1653088983 source:d:\utn\1er cuatri 2022\lab1\parcial_labo\pardo.roberto.p1.labi.1g\main.c
 	<stdio.h>
 	<stdlib.h>
 	"auto.h"
@@ -73,7 +73,7 @@
 
 1652481789 d:\utn\1er cuatri 2022\lab1\parcial_labo\pardo.roberto.p1.labi.1g\servicio.h
 
-1652830433 source:d:\utn\1er cuatri 2022\lab1\parcial_labo\pardo.roberto.p1.labi.1g\trabajo.c
+1653089175 source:d:\utn\1er cuatri 2022\lab1\parcial_labo\pardo.roberto.p1.labi.1g\trabajo.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -86,7 +86,7 @@
 	"utn.h"
 	"pardo.h"
 
-1652488474 d:\utn\1er cuatri 2022\lab1\parcial_labo\pardo.roberto.p1.labi.1g\trabajo.h
+1653089109 d:\utn\1er cuatri 2022\lab1\parcial_labo\pardo.roberto.p1.labi.1g\trabajo.h
 	"fecha.h"
 	"auto.h"
 	"marca.h"
@@ -95,7 +95,7 @@
 
 1652479854 d:\utn\1er cuatri 2022\lab1\parcial_labo\pardo.roberto.p1.labi.1g\fecha.h
 
-1653087587 source:d:\utn\1er cuatri 2022\lab1\parcial_labo\pardo.roberto.p1.labi.1g\informes.c
+1653089171 source:d:\utn\1er cuatri 2022\lab1\parcial_labo\pardo.roberto.p1.labi.1g\informes.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
