@@ -37,6 +37,7 @@ int mostrarColores(eColor colores[], int tamColor)
 {
     int exito = 0;
 
+    system("cls");
     printf("-------------------------------------\n");
     printf("           *** Colores ***           \n");
     printf("    Id      Descripcion\n");
@@ -46,7 +47,7 @@ int mostrarColores(eColor colores[], int tamColor)
     {
         for(int i=0; i<tamColor; i++)
         {
-            printf("    %4d     %10s\n", colores[i].id, colores[i].descripcion);
+            printf("    %4d     %-10s\n", colores[i].id, colores[i].descripcion);
         }
         printf("\n\n");
 

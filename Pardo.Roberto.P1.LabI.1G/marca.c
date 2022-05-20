@@ -39,6 +39,7 @@ int mostrarMarcas(eMarca marcas[], int tamMarca)
 {
     int exito = 0;
 
+    system("cls");
     printf("-------------------------------------\n");
     printf("           *** Marcas ***            \n");
     printf("    Id      Descripcion\n");
@@ -48,7 +49,7 @@ int mostrarMarcas(eMarca marcas[], int tamMarca)
     {
         for(int i=0; i<tamMarca; i++)
         {
-            printf("    %4d     %10s\n", marcas[i].id, marcas[i].descripcion);
+            printf("    %4d     %-10s\n", marcas[i].id, marcas[i].descripcion);
         }
         printf("\n\n");
 

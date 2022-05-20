@@ -136,8 +136,10 @@ int utn_getCaracter(char* pResultado, char* mensaje,char* mensajeError, char min
 				retorno = 0;
 				break;
 			}
-			printf("%s",mensajeError);
-			reintentos--;
+			else{
+                printf("%s",mensajeError);
+                reintentos--;
+            }
 		}while(reintentos>=0);
 
 	}

@@ -60,6 +60,7 @@ int mostrarServicios(eServicio servicios[], int tamServicio)
 {
     int exito = 0;
 
+    system("cls");
     printf(" --------------------------------------------\n");
     printf("             Lista de Servicios              \n");
     printf("    id Serv.     Servicios       Precio \n");
@@ -67,7 +68,7 @@ int mostrarServicios(eServicio servicios[], int tamServicio)
 
     if(servicios != NULL && tamServicio > 0){
         for(int i=0; i<tamServicio; i++){
-            printf("    %d          %-10s   $%10.2f\n", servicios[i].id, servicios[i].descripcion, servicios[i].precio);
+            printf("    %d         %-10s   $%8.2f\n", servicios[i].id, servicios[i].descripcion, servicios[i].precio);
         }
         printf("\n\n");
 

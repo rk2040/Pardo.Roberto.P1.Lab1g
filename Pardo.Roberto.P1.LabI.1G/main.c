@@ -1,10 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "trabajo.h"
 #include "auto.h"
 #include "marca.h"
 #include "color.h"
+#include "trabajo.h"
 #include "servicio.h"
 #include "fecha.h"
 #include "utn.h"
@@ -15,7 +15,6 @@
 #define TAM_COLOR 5
 #define TAM_SERV 4
 #define TAM_TRAB 1000
-
 
 int main()
 {
@@ -74,14 +73,13 @@ int main()
 
     harcodearAutos(autos, TAM_AUTO, 10, &nextIdAuto);
 
-
     do{
         system("cls");
 
         switch(menu())
         {
         case 'A':
-            if( !altaAuto(autos, TAM_AUTO, marcas, TAM_MARCA, colores, TAM_COLOR, &nextIdAuto))
+            if( !altaAuto(autos, TAM_AUTO, marcas, TAM_MARCA, colores, TAM_COLOR, &nextIdAuto) )
             {
                 printf("Hubo algun problema al dar de alta.\n");
             }
@@ -90,21 +88,15 @@ int main()
             }
             break;
         case 'B':
-            if( !modificarAuto(autos, TAM_AUTO, marcas, TAM_MARCA, colores, TAM_COLOR))
+            if( !modificarAuto(autos, TAM_AUTO, marcas, TAM_MARCA, colores, TAM_COLOR) )
             {
                 printf("Hubo un problema al intentar hacer la modificacion.\n");
-            }
-            else{
-                printf("Modificacion exitosa.\n");
             }
             break;
         case 'C':
             if( !bajaAuto(autos, TAM_AUTO, marcas, TAM_MARCA, colores, TAM_COLOR))
             {
                 printf("Hubo un problema al intentar hacer la Baja.\n");
-            }
-            else{
-                printf("Baja exitosa.\n");
             }
             break;
         case 'D':
@@ -145,4 +137,3 @@ int main()
 
     return 0;
 }
-

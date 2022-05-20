@@ -204,7 +204,7 @@ void mostrarAutoFila(eAuto unAuto, eMarca marcas[], int tamMarca, eColor colores
     if( cargarDescripcionMarca(marcas, tamMarca, unAuto.idMarca, descMarca) &&
         cargarDescripcionColor(colores, tamColor, unAuto.idColor, descColor) )
         {
-            printf("%4d     %-10s       %-10s   %c\n", unAuto.id, descMarca, descColor, unAuto.caja);
+            printf("%4d     %-10s      %-10s   %c\n", unAuto.id, descMarca, descColor, unAuto.caja);
         }
 
 }
@@ -218,9 +218,10 @@ int mostrarAutos(eAuto autos[], int tamAuto, eMarca marcas[], int tamMarca, eCol
 
     if(autos != NULL && tamAuto > 0 && marcas != NULL && tamMarca > 0 && colores != NULL && tamColor)
     {
+        system("cls");
         printf("------------------------------------------------\n");
-        printf("         *** Listado de Autos ***             \n");
-        printf("  Id     Marca           Color       Caja\n");
+        printf("         *** Listado de Autos ***               \n");
+        printf("  Id     Marca           Color       Caja       \n");
         printf("------------------------------------------------\n");
 
         for(int i=0; i<tamAuto; i++)
@@ -242,22 +243,24 @@ int mostrarAutos(eAuto autos[], int tamAuto, eMarca marcas[], int tamMarca, eCol
 
 
 // Busqueda por Id
-int buscarAutoId(eAuto autos[], int tamAuto, int id)
+int buscarAutoId(eAuto autos[], int tamAuto, int id, int* pIndex)
 {
-    int indice = 0;
+    int exito = 0;
 
-    if(autos != NULL && tamAuto > 0)
+    if(autos != NULL && tamAuto > 0 && pIndex != NULL)
     {
+        *pIndex = -1;
         for(int i=0; i<tamAuto; i++)
         {
             if( !autos[i].isEmpty && autos[i].id == id)
             {
-                indice = i;
+                *pIndex = i;
                 break;
             }
         }
+        exito = 1;
     }
-    return indice;
+    return exito;
 }
 
 
@@ -271,9 +274,10 @@ int menuModificar()
     printf("-------------------------------------\n");
     printf("1- Color \n");
     printf("2- Caja \n");
-    printf("0- Salir \n");
+    printf("0- Volver al menu anterior. \n");
     printf("Ingrese una opcion: \n");
     scanf("%d", &opcion);
+    fflush(stdin);
     return opcion;
 }
 
@@ -304,6 +308,7 @@ int modificarAuto(eAuto autos[], int tamAuto, eMarca marcas[], int tamMarca, eCo
     int id;
     eAuto auxAuto;
     char confirmaSalir = 'n';
+    char confirma;
 
     if(autos != NULL && tamAuto > 0 && marcas != NULL && tamMarca > 0 && colores != NULL && tamColor)
     {
@@ -312,58 +317,67 @@ int modificarAuto(eAuto autos[], int tamAuto, eMarca marcas[], int tamMarca, eCo
         printf("      *** Modificar Auto ***        \n");
         mostrarAutos(autos, tamAuto, marcas, tamMarca, colores, tamColor);
 
-        utn_getNumero(&id, "Ingrese Id del Auto: ", "Error. Reingrese Id del Auto: ", 1,1000, 5);
+        utn_getNumero(&id, "Ingrese Id del Auto: ", "Error. Reingrese Id del Auto: ", 1,1000, 0);
 
-        indice = buscarAutoId(autos, tamAuto, id);
-
-        if(indice == -1)
+        if( buscarAutoId(autos, tamAuto, id, &indice) )
         {
-            printf("No se encuentra un Auto con ese Id en el sistema.\n");
-        }
-        else{
-            system("cls");
-            mostrarAuto(autos[indice], marcas, tamMarca, colores, tamColor);
+            if(indice == -1)
+            {
+                printf("No se encuentra un Auto con ese Id en el sistema.\n");
+            }
+            else{
+                mostrarAuto(autos[indice], marcas, tamMarca, colores, tamColor);
+                confirma = opcionConfirmar("Quiere Modificar este Auto?: s/n ", "Error. Quiere Modificar este Auto?: s/n ");
 
-            auxAuto = autos[indice];
-
-            do{
-                switch(menuModificar())
+                if(confirma == 's')
                 {
-                case 1:
-                    mostrarColores(colores, tamColor);
-                    printf("Ingrese Id del Color: ");
-                    fflush(stdin);
-                    scanf("%d", &auxAuto.idColor);
-                //Valido Id
-                    while( !validarColor(colores, tamColor, auxAuto.idColor) )
-                    {
-                        printf("Error. Reingrese Id del Color: ");
-                        fflush(stdin);
-                        scanf("%d", &auxAuto.idColor);
-                    }
-                    break;
-                case 2:
-                        printf("Ingrese tipo de caja: m (manual) / a (automatica)\n");
-                        fflush(stdin);
-                        scanf("%c", &auxAuto.caja);
-                        auxAuto.caja = toupper(auxAuto.caja);
-                        while( !(auxAuto.caja == 'M' || auxAuto.caja == 'A') )
+                    auxAuto = autos[indice];
+
+                    do{
+                        system("cls");
+                        mostrarAuto(autos[indice], marcas, tamMarca, colores, tamColor);
+                        switch(menuModificar())
                         {
-                            printf("Ingrese tipo de caja: m (manual) / a (automatica)\n");
-                            fflush(stdin);
-                            scanf("%c", &auxAuto.caja);
-                            auxAuto.caja = toupper(auxAuto.caja);
+                        case 1:
+                            mostrarColores(colores, tamColor);
+                            utn_getNumero(&auxAuto.idColor, "Ingrese Id del Color: ", "Error. Reingrese Id del Color: ", 5000, 5004, 5);
+                        //Valido Id
+                            while( !validarColor(colores, tamColor, auxAuto.idColor) )
+                            {
+                                utn_getNumero(&auxAuto.idColor, "Error. Reingrese Id del Color: ", "Error. Reingrese Id del Color: ", 5000, 5004, 5);
+                            }
+                            autos[indice] = auxAuto;
+                            break;
+                        case 2:
+                                printf("Ingrese tipo de caja: m (manual) / a (automatica)\n");
+                                fflush(stdin);
+                                scanf("%c", &auxAuto.caja);
+                                auxAuto.caja = toupper(auxAuto.caja);
+                                while( !(auxAuto.caja == 'M' || auxAuto.caja == 'A') )
+                                {
+                                    printf("Error. Reingrese tipo de caja: m (manual) / a (automatica)\n");
+                                    fflush(stdin);
+                                    scanf("%c", &auxAuto.caja);
+                                    auxAuto.caja = toupper(auxAuto.caja);
+                                }
+                                autos[indice] = auxAuto;
+                            break;
+                        case 0:
+                            confirmaSalir = opcionConfirmar("Seguro que quiere salir de la Modificacion? s/n ", "Error, vuelva a intentarlo. salir de la Modificacion? s/n ");
+                            break;
+                        default:
+                            printf("Opcion invalida.\n");
+                            break;
                         }
-                    break;
-                case 0:
-                    confirmaSalir = opcionConfirmar("Seguro que quiere salir? s/n ", "Error, vuelva a intentarlo. Salir? s/n ");
-                    break;
-                default:
-                    printf("Opcion invalida.\n");
-                    break;
+
+                    }while(confirmaSalir != 's');
+                }
+                else{
+                    printf("Modificacion cancelada por el usuario\n");
                 }
 
-            }while(confirmaSalir != 's');
+            }
+            exito = 1;
         }
     }
     return exito;
@@ -377,6 +391,7 @@ int bajaAuto(eAuto autos[], int tamAuto, eMarca marcas[], int tamMarca, eColor c
     int exito = 0;
     int indice;
     int id;
+    char confirma;
 
     if(autos != NULL && tamAuto > 0 && marcas != NULL && tamMarca > 0 && colores != NULL && tamColor)
     {
@@ -385,21 +400,30 @@ int bajaAuto(eAuto autos[], int tamAuto, eMarca marcas[], int tamMarca, eColor c
         printf("      *** Baja de Auto ***        \n");
         mostrarAutos(autos, tamAuto, marcas, tamMarca, colores, tamColor);
 
-        utn_getNumero(&id, "Ingrese Id del Auto: ", "Error. Reingrese Id del Auto: ", 1,1000, 5);
+        utn_getNumero(&id, "Ingrese Id del Auto: ", "Error. Reingrese Id del Auto: ", 1,1000, 0);
 
-        indice = buscarAutoId(autos, tamAuto, id);
+        indice = buscarAutoId(autos, tamAuto, id, &indice);
 
-        if(indice == -1)
+        if( buscarAutoId(autos, tamAuto, id, &indice) )
         {
-            printf("No se encuentra un Auto con ese Id en el sistema.\n");
-        }
-        else{
-            system("cls");
-            mostrarAuto(autos[indice], marcas, tamMarca, colores, tamColor);
-
-            if( opcionConfirmar("Confirmar baja? s/n: ", "Error. Confirmar baja? s/n: ") == 's' )
+            if(indice == -1)
             {
-                autos[indice].isEmpty = 1;
+                printf("No se encuentra un Auto con ese Id en el sistema.\n");
+            }
+            else{
+                system("cls");
+                mostrarAuto(autos[indice], marcas, tamMarca, colores, tamColor);
+
+                confirma = opcionConfirmar("Quiere Confirmar la baja de este Auto? s/n: ", "Error. Quiere Confirmar la baja de este Auto? s/n: ");
+
+                if( confirma == 's' )
+                {
+                    autos[indice].isEmpty = 1;
+                    printf("Baja exitosa.\n");
+                }
+                else{
+                    printf("Baja cancelada por el usuario.\n");
+                }
             }
         }
         exito = 1;
@@ -414,9 +438,9 @@ int bajaAuto(eAuto autos[], int tamAuto, eMarca marcas[], int tamMarca, eColor c
 //=========================================================================================================================
 int idAuto[10] = {1,2,3,4,5,6,7,8,9,10};
 
-int idMarca[10] = {1000,1002,1000,1001,1001,1003,1000,1002,1003,1001};
+int idMarca[10] = {1000,1002,1000,1001,1001,1003,1000,1002,1003,1004};
 
-int idColor[10] = {5000,5002,5000,5001,5001,5003,5002,5002,5000,5001};
+int idColor[10] = {5000,5002,5000,5001,5004,5003,5002,5002,5000,5001};
 
 char caja[10] = {'A','A','M','M','M','A','M','M','M','A'};
 

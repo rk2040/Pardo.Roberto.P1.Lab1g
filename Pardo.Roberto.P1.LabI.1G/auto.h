@@ -33,7 +33,7 @@ void mostrarAutoFila(eAuto unAuto, eMarca marcas[], int tamMarca, eColor colores
 
 int mostrarAutos(eAuto autos[], int tamAuto, eMarca marcas[], int tamMarca, eColor colores[], int tamColor);
 
-int buscarAutoId(eAuto autos[], int tamAuto, int id);
+int buscarAutoId(eAuto autos[], int tamAuto, int id, int* pIndex);
 
 int menuModificar();
 

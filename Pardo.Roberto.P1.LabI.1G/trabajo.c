@@ -99,6 +99,7 @@ int altaTrabajo(eTrabajo trabajos[], int tamTrabajo, eAuto autos[], int tamAuto,
             utn_getNumero(&auxTrabajo.fecha.anio, "Ingrese anio: aaaa ", "\nError. Reingrese anio: aaaa", 1990, 2022,5);
         //Fecha mes
             utn_getNumero(&auxTrabajo.fecha.mes, "Ingrese mes: mm ", "\nError. Reingrese mes: mm", 1, 12, 5);
+        //Fecha dia
             if(auxTrabajo.fecha.mes == 1 || auxTrabajo.fecha.mes == 3 || auxTrabajo.fecha.mes == 5 || auxTrabajo.fecha.mes == 7 ||
                auxTrabajo.fecha.mes == 8 || auxTrabajo.fecha.mes == 10 || auxTrabajo.fecha.mes == 12)
             {
@@ -153,6 +154,7 @@ void mostrarTrabajoFila(eTrabajo unTrabajo, eAuto autos[], int tamAuto, eMarca m
                        unTrabajo.fecha.anio
                        );
            }
+           break;
         }
     }
 }
@@ -163,19 +165,24 @@ int mostrarTrabajos(eTrabajo trabajos[], int tamTrabajo, eAuto autos[], int tamA
     int exito = 0;
     int flag = 1;
 
-    if(trabajos != NULL && tamTrabajo > 0){
-        //system("cls");
+    if(trabajos != NULL && tamTrabajo > 0)
+    {
+        system("cls");
         printf("---------------------------------------------------------------------------------------------------\n");
-        printf("                                *** Lista de Trabajos ***                                             \n");
-        printf("  Id      Marca Auto          Color          Servicio         Precio       Fecha Trabajo\n");
+        printf("                                *** Lista de Trabajos ***                                          \n");
+        printf("  Id        Marca Auto       Color         Servicio          Precio        Fecha Trabajo           \n");
         printf("---------------------------------------------------------------------------------------------------\n");
-        for(int i=0; i<tamTrabajo; i++){
-            if( !trabajos[i].isEmpty ){
+
+        for(int i=0; i<tamTrabajo; i++)
+        {
+            if( !trabajos[i].isEmpty )
+            {
                 mostrarTrabajoFila(trabajos[i], autos, tamAuto, marcas, tamMarca, colores, tamColor, servicios, tamServicio);
                 flag = 0;
             }
         }
-        if(flag){
+        if( flag )
+        {
             printf("No hay trabajos para mostrar \n");
         }
         exito = 1;

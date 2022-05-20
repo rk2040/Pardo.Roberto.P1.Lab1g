@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1652481249 source:d:\utn\1er cuatri 2022\lab1\parcial_labo\pardo.roberto.p1.labi.1g\color.c
+1652826666 source:d:\utn\1er cuatri 2022\lab1\parcial_labo\pardo.roberto.p1.labi.1g\color.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -9,19 +9,19 @@
 
 1652479262 source:d:\utn\1er cuatri 2022\lab1\parcial_labo\pardo.roberto.p1.labi.1g\fecha.c
 
-1652488376 source:d:\utn\1er cuatri 2022\lab1\parcial_labo\pardo.roberto.p1.labi.1g\main.c
+1652829163 source:d:\utn\1er cuatri 2022\lab1\parcial_labo\pardo.roberto.p1.labi.1g\main.c
 	<stdio.h>
 	<stdlib.h>
-	"trabajo.h"
 	"auto.h"
 	"marca.h"
 	"color.h"
+	"trabajo.h"
 	"servicio.h"
 	"fecha.h"
 	"utn.h"
 	"pardo.h"
 
-1652480908 source:d:\utn\1er cuatri 2022\lab1\parcial_labo\pardo.roberto.p1.labi.1g\marca.c
+1652826646 source:d:\utn\1er cuatri 2022\lab1\parcial_labo\pardo.roberto.p1.labi.1g\marca.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -43,7 +43,7 @@
 	"pardo.h"
 	"utn.h"
 
-1652489049 source:d:\utn\1er cuatri 2022\lab1\parcial_labo\pardo.roberto.p1.labi.1g\auto.c
+1652837412 source:d:\utn\1er cuatri 2022\lab1\parcial_labo\pardo.roberto.p1.labi.1g\auto.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -54,17 +54,17 @@
 	"utn.h"
 	"pardo.h"
 
-1652488422 d:\utn\1er cuatri 2022\lab1\parcial_labo\pardo.roberto.p1.labi.1g\auto.h
+1652749788 d:\utn\1er cuatri 2022\lab1\parcial_labo\pardo.roberto.p1.labi.1g\auto.h
 	"marca.h"
 	"color.h"
 
-1652413749 source:d:\utn\1er cuatri 2022\lab1\parcial_labo\pardo.roberto.p1.labi.1g\utn.c
+1652746737 source:d:\utn\1er cuatri 2022\lab1\parcial_labo\pardo.roberto.p1.labi.1g\utn.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	"utn.h"
 
-1652485589 source:d:\utn\1er cuatri 2022\lab1\parcial_labo\pardo.roberto.p1.labi.1g\servicio.c
+1652826761 source:d:\utn\1er cuatri 2022\lab1\parcial_labo\pardo.roberto.p1.labi.1g\servicio.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -72,7 +72,7 @@
 
 1652481789 d:\utn\1er cuatri 2022\lab1\parcial_labo\pardo.roberto.p1.labi.1g\servicio.h
 
-1652489371 source:d:\utn\1er cuatri 2022\lab1\parcial_labo\pardo.roberto.p1.labi.1g\trabajo.c
+1652830433 source:d:\utn\1er cuatri 2022\lab1\parcial_labo\pardo.roberto.p1.labi.1g\trabajo.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
