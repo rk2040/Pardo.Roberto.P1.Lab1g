@@ -332,3 +332,52 @@ int precioPorTrabajosPorAuto(eTrabajo trabajos[], int tamTrabajo, eServicio serv
     }
     return exito;
 }
+
+
+// 9
+int autosPorServicios(eTrabajo trabajos[], int tamTrabajo, eServicio servicios[], int tamServicio, eAuto autos[], int tamAuto, eMarca marcas[], int tamMarca, eColor colores[], int tamColor)
+{
+    int exito = 0;
+    int indice;
+    int id;
+    int flag = 1;
+
+    if(trabajos != NULL && tamTrabajo > 0 && servicios != NULL && tamServicio > 0 && autos != NULL && tamAuto > 0 && marcas != NULL && tamMarca > 0 && colores != NULL && tamColor)
+    {
+        mostrarServicios(servicios, tamServicio);
+
+        utn_getNumero(&id, "Ingrese Id del Servicio: ", "Error. Reingrese Id del servicio: ", 20000,20003, 0);
+
+        if( buscarServicioId(servicios, tamServicio, id, &indice) )
+        {
+            if(indice == -1)
+            {
+                printf("No se encuentra un Servicio con ese Id en el sistema.\n");
+            }
+            else{
+                system("cls");
+                printf("---------------------------------------------------------------------------------------------------\n");
+                printf("                       *** Lista de Autos por Servicio realizado ***                               \n");
+                printf("  Id        Marca Auto       Color         Servicio          Precio        Fecha Trabajo           \n");
+                printf("---------------------------------------------------------------------------------------------------\n");
+
+                for(int i=0; i<tamTrabajo; i++)
+                {
+                    if( !trabajos[i].isEmpty && trabajos[i].idServicio == servicios[indice].id)
+                    {
+                        mostrarTrabajoFila(trabajos[i], autos, tamAuto, marcas, tamMarca, colores, tamColor, servicios, tamServicio);
+                        flag = 0;
+                    }
+                }
+                if( flag )
+                {
+                    printf("No hay trabajos para mostrar \n");
+                }
+
+
+            }
+            exito = 1;
+        }
+    }
+    return exito;
+}

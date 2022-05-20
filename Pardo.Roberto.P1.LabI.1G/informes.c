@@ -79,7 +79,7 @@ int informes(eAuto autos[], int tamAuto, eMarca marcas[], int tamMarca, eColor c
                 precioPorTrabajosPorAuto(trabajos, tamTrabajo, servicios, tamServicio, autos, tamAuto, marcas, tamMarca, colores, tamColor);
                 break;
             case 9:
- //               autosPorServicios(trabajos, tamTrabajo, servicios, tamServicio, autos, tamAuto, marcas, tamMarca, colores, tamColor);
+                autosPorServicios(trabajos, tamTrabajo, servicios, tamServicio, autos, tamAuto, marcas, tamMarca, colores, tamColor);
                 break;
             case 10:
                 printf("3.\n");

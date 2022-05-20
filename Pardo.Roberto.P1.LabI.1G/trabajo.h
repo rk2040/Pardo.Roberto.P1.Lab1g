@@ -36,3 +36,5 @@ int trabajosPorAuto(eTrabajo trabajos[], int tamTrabajo, eServicio servicios[], 
 
 int precioPorTrabajosPorAuto(eTrabajo trabajos[], int tamTrabajo, eServicio servicios[], int tamServicio, eAuto autos[], int tamAuto, eMarca marcas[], int tamMarca, eColor colores[], int tamColor);
 
+int autosPorServicios(eTrabajo trabajos[], int tamTrabajo, eServicio servicios[], int tamServicio, eAuto autos[], int tamAuto, eMarca marcas[], int tamMarca, eColor colores[], int tamColor);
+

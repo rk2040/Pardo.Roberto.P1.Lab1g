@@ -1,6 +1,7 @@
 #ifndef SERVICIO_H_INCLUDED
 #define SERVICIO_H_INCLUDED
 
+
 typedef struct
 {
     int id; // Comienza en 20000
@@ -18,4 +19,6 @@ int cargarPrecioServicio(eServicio servicios[], int tamServicio, int idServicio,
 int mostrarServicios(eServicio servicios[], int tamServicio);
 
 int validarServicio(eServicio servicios[], int tamServicio, int id);
+
+int buscarServicioId(eServicio servicios[], int tamServicio, int id, int* pIndex);
 

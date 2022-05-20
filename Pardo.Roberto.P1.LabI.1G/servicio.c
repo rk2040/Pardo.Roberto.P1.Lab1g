@@ -95,3 +95,26 @@ int validarServicio(eServicio servicios[], int tamServicio, int id)
 }
 
 
+// Busqueda por Id
+int buscarServicioId(eServicio servicios[], int tamServicio, int id, int* pIndex)
+{
+    int exito = 0;
+
+    if(servicios != NULL && tamServicio > 0 && pIndex != NULL)
+    {
+        *pIndex = -1;
+        for(int i=0; i<tamServicio; i++)
+        {
+            if( servicios[i].id == id )
+            {
+                *pIndex = i;
+                break;
+            }
+        }
+        exito = 1;
+    }
+    return exito;
+}
+
+// Bonus Track  -   Harcodear algunos Trabajos
+
