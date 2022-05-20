@@ -74,3 +74,27 @@ int validarColor(eColor colores[], int tamColor, int id)
     }
     return esValido;
 }
+
+//===================================================================================================================
+//                      Informes complementarios
+//===================================================================================================================
+
+int buscarColorId(eColor colores[], int tamColor, int id, int* pIndex)
+{
+    int exito = 0;
+
+    if(colores != NULL && tamColor > 0 && pIndex != NULL)
+    {
+        *pIndex = -1;
+        for(int i=0; i<tamColor; i++)
+        {
+            if( colores[i].id == id)
+            {
+                *pIndex = i;
+                break;
+            }
+        }
+        exito = 1;
+    }
+    return exito;
+}

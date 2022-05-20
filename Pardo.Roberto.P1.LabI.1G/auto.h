@@ -45,3 +45,15 @@ int bajaAuto(eAuto autos[], int tamAuto, eMarca marcas[], int tamMarca, eColor c
 
 int harcodearAutos(eAuto autos[], int tamAuto, int cant, int* pId);
 
+int mostrarAutosPorColorSeleccionado(eAuto autos[], int tamAuto, eMarca marcas[], int tamMarca, eColor colores[], int tamColor);
+
+int mostrarAutosPorMarcaSeleccionada(eAuto autos[], int tamAuto, eMarca marcas[], int tamMarca, eColor colores[], int tamColor);
+
+int promedioAutosPorCaja(eAuto autos[], int tamAuto, eMarca marcas[], int tamMarca, eColor colores[], int tamColor);
+
+int listadoAutosPorCaja(eAuto autos[], int tamAuto, eMarca marcas[], int tamMarca, eColor colores[], int tamColor);
+
+int autosPorColoryMarca(eAuto autos[], int tamAuto, eMarca marcas[], int tamMarca, eColor colores[], int tamColor);
+
+int marcasConMasAutos(eAuto autos[], int tamAuto, eMarca marcas[], int tamMarca, eColor colores[], int tamColor);
+

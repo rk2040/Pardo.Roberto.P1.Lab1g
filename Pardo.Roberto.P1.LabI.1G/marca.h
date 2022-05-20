@@ -16,3 +16,4 @@ int mostrarMarcas(eMarca marcas[], int tamMarca);
 
 int validarMarca(eMarca marcas[], int tamMarca, int id);
 
+int buscarMarcaId(eMarca marcas[], int tamMarca, int id, int* pIndex);

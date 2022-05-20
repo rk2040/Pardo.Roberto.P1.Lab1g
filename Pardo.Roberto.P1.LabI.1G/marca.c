@@ -78,3 +78,28 @@ int validarMarca(eMarca marcas[], int tamMarca, int id)
 }
 
 
+//===================================================================================================================
+//                      Informes complementarios
+//===================================================================================================================
+
+int buscarMarcaId(eMarca marcas[], int tamMarca, int id, int* pIndex)
+{
+    int exito = 0;
+
+    if(marcas != NULL && tamMarca > 0 && pIndex != NULL)
+    {
+        *pIndex = -1;
+        for(int i=0; i<tamMarca; i++)
+        {
+            if( marcas[i].id == id)
+            {
+                *pIndex = i;
+                break;
+            }
+        }
+        exito = 1;
+    }
+    return exito;
+}
+
+

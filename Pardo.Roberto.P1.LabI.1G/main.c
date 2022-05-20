@@ -9,6 +9,7 @@
 #include "fecha.h"
 #include "utn.h"
 #include "pardo.h"
+#include "informes.h"
 
 #define TAM_AUTO 1000
 #define TAM_MARCA 5
@@ -122,6 +123,9 @@ int main()
             break;
         case 'I':
             mostrarTrabajos(trabajos, TAM_TRAB, autos, TAM_AUTO, marcas, TAM_MARCA, colores, TAM_COLOR, servicios, TAM_SERV);
+            break;
+        case 'J':
+            informes(autos, TAM_AUTO, marcas, TAM_MARCA, colores, TAM_COLOR, trabajos, TAM_TRAB, servicios, TAM_SERV);
             break;
         case 'X':
             salir = opcionConfirmar("Seguro que quiere salir? s/n ", "Error, vuelva a intentarlo. Salir? s/n ");

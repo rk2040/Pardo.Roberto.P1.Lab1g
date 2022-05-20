@@ -1,15 +1,15 @@
 # depslib dependency file v1.0
-1652826666 source:d:\utn\1er cuatri 2022\lab1\parcial_labo\pardo.roberto.p1.labi.1g\color.c
+1653085125 source:d:\utn\1er cuatri 2022\lab1\parcial_labo\pardo.roberto.p1.labi.1g\color.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	"color.h"
 
-1652481268 d:\utn\1er cuatri 2022\lab1\parcial_labo\pardo.roberto.p1.labi.1g\color.h
+1653085157 d:\utn\1er cuatri 2022\lab1\parcial_labo\pardo.roberto.p1.labi.1g\color.h
 
 1652479262 source:d:\utn\1er cuatri 2022\lab1\parcial_labo\pardo.roberto.p1.labi.1g\fecha.c
 
-1652829163 source:d:\utn\1er cuatri 2022\lab1\parcial_labo\pardo.roberto.p1.labi.1g\main.c
+1653085454 source:d:\utn\1er cuatri 2022\lab1\parcial_labo\pardo.roberto.p1.labi.1g\main.c
 	<stdio.h>
 	<stdlib.h>
 	"auto.h"
@@ -20,8 +20,9 @@
 	"fecha.h"
 	"utn.h"
 	"pardo.h"
+	"informes.h"
 
-1652826646 source:d:\utn\1er cuatri 2022\lab1\parcial_labo\pardo.roberto.p1.labi.1g\marca.c
+1653085208 source:d:\utn\1er cuatri 2022\lab1\parcial_labo\pardo.roberto.p1.labi.1g\marca.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -29,7 +30,7 @@
 	"utn.h"
 	"pardo.h"
 
-1652480881 d:\utn\1er cuatri 2022\lab1\parcial_labo\pardo.roberto.p1.labi.1g\marca.h
+1653085219 d:\utn\1er cuatri 2022\lab1\parcial_labo\pardo.roberto.p1.labi.1g\marca.h
 
 1652413817 d:\utn\1er cuatri 2022\lab1\parcial_labo\pardo.roberto.p1.labi.1g\utn.h
 
@@ -43,7 +44,7 @@
 	"pardo.h"
 	"utn.h"
 
-1652837412 source:d:\utn\1er cuatri 2022\lab1\parcial_labo\pardo.roberto.p1.labi.1g\auto.c
+1653088148 source:d:\utn\1er cuatri 2022\lab1\parcial_labo\pardo.roberto.p1.labi.1g\auto.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -54,7 +55,7 @@
 	"utn.h"
 	"pardo.h"
 
-1652749788 d:\utn\1er cuatri 2022\lab1\parcial_labo\pardo.roberto.p1.labi.1g\auto.h
+1653088161 d:\utn\1er cuatri 2022\lab1\parcial_labo\pardo.roberto.p1.labi.1g\auto.h
 	"marca.h"
 	"color.h"
 
@@ -93,4 +94,25 @@
 	"servicio.h"
 
 1652479854 d:\utn\1er cuatri 2022\lab1\parcial_labo\pardo.roberto.p1.labi.1g\fecha.h
+
+1653087587 source:d:\utn\1er cuatri 2022\lab1\parcial_labo\pardo.roberto.p1.labi.1g\informes.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"informes.h"
+	"Auto.h"
+	"Marca.h"
+	"Color.h"
+	"Trabajo.h"
+	"Servicio.h"
+	"utn.h"
+	"pardo.h"
+
+1653085075 d:\utn\1er cuatri 2022\lab1\parcial_labo\pardo.roberto.p1.labi.1g\informes.h
+	"Auto.h"
+	"Marca.h"
+	"Color.h"
+	"Trabajo.h"
+	"Servicio.h"
 

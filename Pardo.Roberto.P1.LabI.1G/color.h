@@ -16,3 +16,5 @@ int mostrarColores(eColor colores[], int tamColor);
 
 int validarColor(eColor colores[], int tamColor, int id);
 
+int buscarColorId(eColor colores[], int tamColor, int id, int* pIndex);
+
