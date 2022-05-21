@@ -38,3 +38,9 @@ int precioPorTrabajosPorAuto(eTrabajo trabajos[], int tamTrabajo, eServicio serv
 
 int autosPorServicios(eTrabajo trabajos[], int tamTrabajo, eServicio servicios[], int tamServicio, eAuto autos[], int tamAuto, eMarca marcas[], int tamMarca, eColor colores[], int tamColor);
 
+int mostrarFechas(eTrabajo trabajos[], int tamTrabajo);
+
+void mostrarTrabajoFilaFecha(eTrabajo unTrabajo, eAuto autos[], int tamAuto, eMarca marcas[], int tamMarca, eColor colores[], int tamColor, eServicio servicios[], int tamServicio);
+
+int serviciosPorFecha(eTrabajo trabajos[], int tamTrabajo, eServicio servicios[], int tamServicio, eAuto autos[], int tamAuto, eMarca marcas[], int tamMarca, eColor colores[], int tamColor);
+

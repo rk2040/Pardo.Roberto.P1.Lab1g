@@ -65,7 +65,7 @@
 	<string.h>
 	"utn.h"
 
-1652826761 source:d:\utn\1er cuatri 2022\lab1\parcial_labo\pardo.roberto.p1.labi.1g\servicio.c
+1653089846 source:d:\utn\1er cuatri 2022\lab1\parcial_labo\pardo.roberto.p1.labi.1g\servicio.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -86,7 +86,7 @@
 	"utn.h"
 	"pardo.h"
 
-1653089864 d:\utn\1er cuatri 2022\lab1\parcial_labo\pardo.roberto.p1.labi.1g\trabajo.h
+1653092026 d:\utn\1er cuatri 2022\lab1\parcial_labo\pardo.roberto.p1.labi.1g\trabajo.h
 	"fecha.h"
 	"auto.h"
 	"marca.h"
@@ -95,7 +95,7 @@
 
 1652479854 d:\utn\1er cuatri 2022\lab1\parcial_labo\pardo.roberto.p1.labi.1g\fecha.h
 
-1653089171 source:d:\utn\1er cuatri 2022\lab1\parcial_labo\pardo.roberto.p1.labi.1g\informes.c
+1653092232 source:d:\utn\1er cuatri 2022\lab1\parcial_labo\pardo.roberto.p1.labi.1g\informes.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>

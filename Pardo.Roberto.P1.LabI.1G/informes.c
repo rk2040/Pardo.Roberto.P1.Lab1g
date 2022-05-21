@@ -82,7 +82,7 @@ int informes(eAuto autos[], int tamAuto, eMarca marcas[], int tamMarca, eColor c
                 autosPorServicios(trabajos, tamTrabajo, servicios, tamServicio, autos, tamAuto, marcas, tamMarca, colores, tamColor);
                 break;
             case 10:
-                printf("3.\n");
+                serviciosPorFecha(trabajos, tamTrabajo, servicios, tamServicio, autos, tamAuto, marcas, tamMarca, colores, tamColor);
                 break;
             case 0:
                 salir = opcionConfirmar("Seguro que quiere volver al menu anterior? s/n ", "Error, vuelva a intentarlo. Volver al menu anterior? s/n ");

@@ -381,3 +381,116 @@ int autosPorServicios(eTrabajo trabajos[], int tamTrabajo, eServicio servicios[]
     }
     return exito;
 }
+
+
+// Listar Fechas
+int mostrarFechas(eTrabajo trabajos[], int tamTrabajo)
+{
+    int exito = 0;
+
+    system("cls");
+    printf(" -------------------\n");
+    printf("  Lista de Fechas   \n");
+    printf("     fecha   \n");
+    printf(" -------------------\n");
+
+    if(trabajos != NULL && tamTrabajo > 0)
+    {
+        for(int i=0; i<tamTrabajo; i++){
+            if( !trabajos[i].isEmpty )
+            {
+                printf("  %02d/%02d/%d\n",
+                       trabajos[i].fecha.dia,
+                       trabajos[i].fecha.mes,
+                       trabajos[i].fecha.anio
+                       );
+            }
+        }
+        printf("\n\n");
+
+        exito = 1;
+    }
+    return exito;
+}
+
+void mostrarTrabajoFilaFecha(eTrabajo unTrabajo, eAuto autos[], int tamAuto, eMarca marcas[], int tamMarca, eColor colores[], int tamColor, eServicio servicios[], int tamServicio)
+{
+    char descServicio[25];
+    float precioServicio;
+    //int indice;
+
+    for(int i=0; i<tamAuto; i++)
+    {
+        if(unTrabajo.idAuto == autos[i].id)
+        {
+           // indice = i;
+
+            if( cargarDescripcionServicios(servicios, tamServicio, unTrabajo.idServicio, descServicio) &&
+                cargarPrecioServicio(servicios, tamServicio, unTrabajo.idServicio, &precioServicio) )
+            {
+                printf(" %2d       %-15s $%7.2f         %02d/%02d/%d\n",
+                       unTrabajo.id,
+                       descServicio,
+                       precioServicio,
+                       unTrabajo.fecha.dia,
+                       unTrabajo.fecha.mes,
+                       unTrabajo.fecha.anio
+                       );
+           }
+           break;
+        }
+    }
+}
+
+// 10
+int serviciosPorFecha(eTrabajo trabajos[], int tamTrabajo, eServicio servicios[], int tamServicio, eAuto autos[], int tamAuto, eMarca marcas[], int tamMarca, eColor colores[], int tamColor)
+{
+    int exito = 0;
+    int flag = 1;
+    eTrabajo auxTrabajo;
+
+    if(trabajos != NULL && tamTrabajo > 0 && servicios != NULL && tamServicio > 0 && autos != NULL && tamAuto > 0 && marcas != NULL && tamMarca > 0 && colores != NULL && tamColor)
+    {
+        mostrarFechas(trabajos, tamTrabajo);
+
+    //Fecha año
+        utn_getNumero(&auxTrabajo.fecha.anio, "Ingrese anio: aaaa ", "\nError. Reingrese anio: aaaa", 1990, 2022,5);
+    //Fecha mes
+        utn_getNumero(&auxTrabajo.fecha.mes, "Ingrese mes: mm ", "\nError. Reingrese mes: mm", 1, 12, 5);
+    //Fecha dia
+        if(auxTrabajo.fecha.mes == 1 || auxTrabajo.fecha.mes == 3 || auxTrabajo.fecha.mes == 5 || auxTrabajo.fecha.mes == 7 ||
+           auxTrabajo.fecha.mes == 8 || auxTrabajo.fecha.mes == 10 || auxTrabajo.fecha.mes == 12)
+        {
+            utn_getNumero(&auxTrabajo.fecha.dia, "Ingrese dia: dd ", "\nError. Reingrese dia: dd", 1, 31, 5);
+        }
+        else if(auxTrabajo.fecha.mes == 4 || auxTrabajo.fecha.mes == 6 || auxTrabajo.fecha.mes == 9 || auxTrabajo.fecha.mes == 11)
+        {
+            utn_getNumero(&auxTrabajo.fecha.dia, "Ingrese dia: dd ", "\nError. Reingrese dia: dd", 1, 30, 5);
+        }
+        else{
+            utn_getNumero(&auxTrabajo.fecha.dia, "Ingrese dia: dd ", "\nError. Reingrese dia: dd", 1, 28, 5);
+        }
+
+                system("cls");
+        printf("-------------------------------------------------------------------\n");
+        printf("           *** Lista de Servicios por Fecha ***                    \n");
+        printf("  Id        Servicio          Precio        Fecha Trabajo          \n");
+        printf("-------------------------------------------------------------------\n");
+
+        for(int i=0; i<tamTrabajo; i++)
+        {
+            if( !trabajos[i].isEmpty && auxTrabajo.fecha.anio == trabajos[i].fecha.anio &&
+                 auxTrabajo.fecha.mes == trabajos[i].fecha.mes && auxTrabajo.fecha.dia == trabajos[i].fecha.dia)
+            {
+                mostrarTrabajoFilaFecha(trabajos[i], autos, tamAuto, marcas, tamMarca, colores, tamColor, servicios, tamServicio);
+                flag = 0;
+            }
+        }
+        if( flag )
+        {
+            printf("No hay cargados Servicios realizados ese dia en el sistema.\n");
+        }
+        exito = 1;
+        }
+    return exito;
+}
